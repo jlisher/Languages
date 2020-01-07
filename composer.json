@@ -7,7 +7,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Jlisher\\Languages": "src/"
+            "Jlisher\\Languages\\": "src/"
         }
     },
     "require": {}
