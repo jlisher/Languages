@@ -1,0 +1,14 @@
+{
+    "name": "jlisher/languages",
+    "version": "1.0.0",
+    "description": "Package for getting ISO language codes and name with support for i18n localization",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Jlisher\\Languages": "src/"
+        }
+    },
+    "require": {}
+}
