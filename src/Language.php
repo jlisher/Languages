@@ -45,6 +45,10 @@ class Language implements LanguageContract {
      */
     public function __get($name)
     {
-        // TODO: Implement __get() method.
+        if (! isset($this->data[$name])) {
+            return null;
+        }
+
+        return $this->data[$name];
     }
 }
