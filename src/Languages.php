@@ -109,7 +109,7 @@ class Languages
      *
      * @param string $code
      *
-     * @return array|bool - Returns FALSE on failure to retrieve language.
+     * @return \Jlisher\Languages\Contracts\LanguageContract|\Jlisher\Languages\Language|bool
      */
     public function byAlpha2($code)
     {
@@ -121,7 +121,7 @@ class Languages
 
         $language['name'] = $this->getTranslation($language['alpha_2']);
 
-        return $language;
+        return Language::make($language);
     }
 
     /**
@@ -129,7 +129,7 @@ class Languages
      *
      * @param string $code
      *
-     * @return array|bool - Returns FALSE on failure to retrieve language.
+     * @return \Jlisher\Languages\Contracts\LanguageContract|\Jlisher\Languages\Language|bool
      */
     public function byAlpha3($code)
     {
@@ -141,7 +141,7 @@ class Languages
 
         $language['name'] = $this->getTranslation($language['alpha_2']);
 
-        return $language;
+        return Language::make($language);
     }
 
     /**
@@ -149,7 +149,7 @@ class Languages
      *
      * @param string $name
      *
-     * @return array|bool - Returns FALSE on failure to retrieve language.
+     * @return bool|\Jlisher\Languages\Contracts\LanguageContract|\Jlisher\Languages\Language
      */
     public function byNativeName($name)
     {
@@ -161,7 +161,7 @@ class Languages
 
         $language['name'] = $this->getTranslation($language['alpha_2']);
 
-        return $language;
+        return Language::make($language);
     }
 
     /**
@@ -169,7 +169,7 @@ class Languages
      *
      * @param string $name
      *
-     * @return array|bool
+     * @return bool|\Jlisher\Languages\Contracts\LanguageContract|\Jlisher\Languages\Language
      */
     public function byName($name)
     {
